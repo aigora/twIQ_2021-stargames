@@ -35,14 +35,14 @@ int main () {
 			printf("Las categorias de este juego son:\n");
 			printf(" -Ciencias.\n");
 			printf(" -Deportes.\n");
-			printf(" -Cultura general.\n");
+			printf(" -Geografía.\n");
 			printf(" -Entretenimiento.\n");
 			printf(" \n");
 			printf("Cuando el jugador acierta la pregunta correspondiente a dicha categoria consigue un quesito ,\n");
 			printf(" si el jugador no acierta la pregunta cambiaria de categoria al azar y tendria que responder dos preguntas en vez de una para ganar un quesito.\n");
 			printf("Si el usuario que consiga los 4 quesitos jugara la ronda final\n");
 			printf(" Consta de 10 preguntas pudiendo fallar 3.\n");
-			printf("SI el usuario completa la ronda final ganar� el juego.\n");
+			printf("SI el usuario completa la ronda final ganará el juego.\n");
 			break;
 			
 		case '3'://Ahorcado
