@@ -2,7 +2,7 @@
 
 int main () {
 	
-	char juego1,juego2,juego3,jugador1,opcion;
+	char juego1,juego2,jugador1,opcion;
 	
 
 	do{
@@ -12,40 +12,18 @@ int main () {
 	scanf("%c",&opcion);
 	
 	switch (opcion){
-		case '1'://Solitario
+		case '1'://Snake
 			printf("J1 introduzca su nombre de usuario:\n");
 			fflush(stdin);
 			scanf("%c",&jugador1);
-			printf("Es un juego basado en cartas , solo puede jugar un jugador.\n");
-			printf("El usuario tendra que completar el solitario en menos de 15 min.\n");
+			printf("Es un juego basado en aumentar el tamaño de la serpiente , solo puede jugar un jugador.\n");
+		        printf("El usuario tendra tres niveles de dificultad:facil,medio,dificil.\n");
 			printf("Si el usuario completa el juego le saldra un mensaje de reiniciaro o volver al menu del programa.\n");
-			printf("El usario tendra 3 comodines en caso de no poder compleatr el solitario.\n");
+			printf("Si el usuario choca con alguna de las paredes le aparecera un mensaje de GAME OVER y la opcion de volver a empezar.\n");
 			break;
 			
 			
-			
-		case '2'://TRivial	
-			printf("J1 introduzca su nombre de usuario:\n");
-			fflush(stdin);
-			scanf("%c",&jugador1);
-			printf("Es un juego  basado en preguntas y respuestas,hay 4 categorias .\n");
-			printf("El usuario tendra que responder al menos un quesito de cada categoria para poder jugar la ronda final,\n");
-			printf("La Ronda final consta de 10 preguntas de categorias aleatorias, se permite fallar 2 \n");
-			printf("Al inicio del juego, el usuario debera elegir un color con el que comenzara a jugar.\n");
-			printf("Las categorias de este juego son:\n");
-			printf(" -Ciencias.\n");
-			printf(" -Deportes.\n");
-			printf(" -Geografía.\n");
-			printf(" -Entretenimiento.\n");
-			printf(" \n");
-			printf("Cuando el jugador acierta la pregunta correspondiente a dicha categoria consigue un quesito ,\n");
-			printf(" si el jugador no acierta la pregunta cambiaria de categoria al azar y tendria que responder dos preguntas en vez de una para ganar un quesito.\n");
-			printf("Si el usuario que consiga los 4 quesitos jugara la ronda final\n");
-			printf(" Consta de 10 preguntas pudiendo fallar 3.\n");
-			printf("SI el usuario completa la ronda final ganará el juego.\n");
-			break;
-			
-		case '3'://Ahorcado
+		case '2'://Ahorcado
 			printf("J1 introduzca su nombre de usuario:\n");
 			fflush(stdin);
 			scanf("%c",&jugador1);
@@ -64,14 +42,14 @@ int main () {
 			break;
 	
 			  
-	    case'4'://Abandonar juego
+	    case'3'://Abandonar juego
 			printf("Hasta la proxima!!!!!!!!\n");
 			default:
 		printf("la opcion es incorrecta:\n");
 			return 0;//salir del programa
 	}
 		
-}while (juego1||juego2||juego3);
+}while (juego1||juego2);
 		
 	}
 
