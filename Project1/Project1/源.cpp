@@ -138,7 +138,7 @@ void start()
 	outtextxy(30, 330, "Presione p para pausar / continuar el juego, e para finalizar el juego");
 	outtextxy(80, 360, "Contenido relacionado: Serpientes");
 	outtextxy(100, 390, "Productor: Hu, Moisis,Alex ");
-	outtextxy(100, 430, "grupo：XXXX");
+	outtextxy(100, 430, "grupo：STARGAME");
 	settextcolor(RED);
 	mciSendString("open h.mp3 alias mymusic", NULL, 0, NULL);//abrir la musica
 	settextstyle(10, 10, _T("方正顷刻"));
