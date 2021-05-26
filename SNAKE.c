@@ -167,13 +167,13 @@ void Manual()	//introduccion
     printf("Presione la barra espaciadora para pausar"); 
     gotoxy(N+30,8);
     color(11);
-    printf("La puntuaci車n hist車rica m芍s alta es: ");
+    printf("Puntacion mas alta: ");
     color(12);
-    gotoxy(N+44,8);
+    gotoxy(N+50,8);
     printf("%d",score[1]*10);
     color(11);
     gotoxy(N+30,10); 
-    printf("Tu puntuaci車n ahora es: ");         
+    printf("Tu puntuacion: ");         
 }
 
 int File_in()     //Tomar puntuaci車n grabada
