@@ -10,7 +10,6 @@ zhiqin Hu , zhiqinHu
 Introducir un nombre de usuario para entrar al menú de juegos.
 Elegir el juego al que quieras jugar.
 Pulsa botón ayuda para mostrar las reglas del juego.
-Mensaje de alerta si llevas demasiado tiempo jugando al juego.
 Opcion  para cambiar el juego o reiniciarlo.
 Menu de fin de Juego.
 Mensaje de despedida.
