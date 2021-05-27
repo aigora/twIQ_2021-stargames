@@ -33,13 +33,10 @@ int main () {
 						printf("Si el usuario choca con alguna de las paredes le aparecera un mensaje de GAME OVER y la opcion de volver a empezar.\n");
 						printf("J1 introduzca su nombre de usuario:\n");
 						fflush(stdin);
-						break;
-			
-					case 'i':
-					case 'I':
-						
-						system("cls");
-										  int len;					   	//longitud de snake
+						char asa[60];
+						scanf("%s",asa);
+							system("cls");
+						int len;					   	//longitud de snake
     char ch = 'g';				   	//Definir variables para almacenar caracteres escritos desde el teclado
     char a[N+2][N+2] = {{0}};      	//Inicializar la matriz de mapas
     char **snake;				   	
@@ -77,6 +74,50 @@ int main () {
     }
     Free(snake, len);						 
     exit(0);
+						break;
+			
+					case 'i':
+					case 'I':
+						
+						system("cls");
+										  int lena;					   	//longitud de snake
+    char cha = 'g';				   	//Definir variables para almacenar caracteres escritos desde el teclado
+    char as[N+2][N+2] = {{0}};      	//Inicializar la matriz de mapas
+    char **snakes;				   	
+    srand((unsigned)time(NULL));   	
+    color(11);					   	//Establecer el color de la consola 
+    File_in();					   	//sacar la nota 
+    init(as, &snakes, &lena);		   	 
+    Manual();					   
+    while (cha != 0x1B)   		   	// Presione ESC para finalizar
+    { 
+    	Draw(snakes, lena);
+        if (!apple[2]) 				
+		{
+            apple[0] = rand()%N + 1;
+            apple[1] = rand()%N + 1;
+            apple[2] = 1;
+        }
+        Sleep(200-score[2]*10);		//A medida que aumenta la puntuación, aumenta la velocidad, cuántos segundos para dormir, cuanto más corto sea el tiempo entre paréntesis, más rápido será el movimiento
+        setbuf(stdin, NULL);	  	
+        if (kbhit())
+        {
+            gotoxy(0, N+2);			
+            cha = getche();		
+        }
+        snakes = Move(snakes, cha, &lena); 
+        if (Block(snake[0])==1)		//Cuando la cabeza de la serpiente toca la pared, muere.
+        {
+            gotoxy(N+2, N+2);
+            puts("game over");
+            File_out();			
+            Free(snakes, lena);	
+            getche();				
+            exit(0); 			
+        }                        
+    }
+    Free(snakes, lena);						 
+    exit(0);
 	
 						fflush(stdin);
 						printf("J1 introduzca su nombre de usuario:\n");
@@ -84,10 +125,16 @@ int main () {
 						fflush(stdin);
 			}while('r'||'i');
 		case '2'://Ahorcado
-			
+			while(1){
+			while(1){
+		
+			system("cls");
+
 			printf("Seleccione 'r' si desea ver como jugar \n");
 			printf("Seleccione 'i' para iniciar el juego\n");
 			scanf("%c",&opcion2);
+			int als;
+
 			switch(opcion2){
 					case 'r':
 					case 'R':
@@ -101,7 +148,11 @@ int main () {
 						printf("En ambos casos se mostrara la opcion de volver al menu o reiniciar el juego\n");
 						
 						fflush(stdin);
+						fflush(stdin);
+						scanf("%d",&als);
+						if(als==3)
 						break;
+
 					case 'I':
 					case 'i':
 						system("cls");
@@ -220,7 +271,8 @@ int main () {
 	
 							break;
 							break;
-	
+}}
+
 		
 	   	case'3'://Abandonar juego
 			printf("Hasta la proxima!!!!!!!!\n");
