@@ -22,7 +22,6 @@ int main () {
 	switch (opcion){
 		case '1'://Snake
 			printf("Seleccione 'r' si desea ver como jugar \n");
-			printf("Seleccione 'i' para iniciar el juego\n");
 			scanf("%c",&opcion1);
 			switch(opcion1){
 					case 'R':
