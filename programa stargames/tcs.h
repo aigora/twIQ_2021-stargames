@@ -215,7 +215,7 @@ int File_out()    //guardar
        printf("Salida fallida\n");
 	gotoxy(10,10);
     color(12);
-    puts("Felicitaciones por romper el r¨¦cord"); 
+    puts("you lost"); 
     gotoxy(0,N+2);
     return 0;
 }
