@@ -189,7 +189,7 @@ int File_in()     //Tomar puntuaci車n grabada
    	}
    	if((score[1] = fgetc(fp)) != EOF);		//leer archivo 
    	else
-   		score[1] = 0;//La puntuaci車n m芍s alta registrada en el archivo al principio es 0
+   		score[1] =0;//La puntuaci車n m芍s alta registrada en el archivo al principio es 0
    	return 0;
 }
 
@@ -197,26 +197,20 @@ int File_out()    //guardar
 {
         
     FILE *fp;
-    if(score[1] > score[0]) 		
+
+    fp = fopen("01.txt","a+");
+    if(fp == NULL)
     {
-		gotoxy(10,10); 
-    	color(12);
-    	puts("sorry game over");
-    	gotoxy(0,N+2); 
-    	return 0;
-    }
-    // Cuando la puntuaci車n obtenida es superior al r谷cord
-    if((fp = fopen("01.txt","w+")) == NULL)
-    {
-        printf("el archivo n se puede abrir\n");
+        printf("el archivo no se puede abrir\n");
         exit(0);
     }
-	if(fputc(--score[0],fp)==EOF) 
-       printf("Salida fallida\n");
+
+	fprintf(fp,"%d\t",(score[0]-1)*10);
 	gotoxy(10,10);
     color(12);
     puts("you lost"); 
     gotoxy(0,N+2);
+    fclose(fp);
     return 0;
 }
 

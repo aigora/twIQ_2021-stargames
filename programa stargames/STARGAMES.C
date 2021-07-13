@@ -35,6 +35,14 @@ int main () {
 						fflush(stdin);
 						char asa[60];
 						scanf("%s",asa);
+						FILE *pf =fopen("01.txt","a+");
+						if(pf==NULL)
+						{
+							printf("文件打开失败！\n");
+							return 0;
+						}
+						fprintf(pf,"\n%s ",asa);
+						fclose(pf);
 						system("cls");
 						int len;					   	//longitud de snake
     					char ch = 'g';				   	//Definir variables para almacenar caracteres escritos desde el teclado
